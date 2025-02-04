@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="ActiveReportsJS" constructor="JSReportsViewer" version="0.0.1" display-name-key="JSReportsViewer" description-key="" control-type="virtual" >
+    <!--external-service-usage ノードは、このサードパーティPCFコントロールが外部サービスを使用しているかどうかを宣言します。使用している場合、このコントロールはプレミアムと見なされ、使用している外部ドメインも追加してください。
+    外部サービスを使用していない場合、enabled="false" を設定し、以下にドメインを追加しないでください。"enabled" はデフォルトで false になります。
+    例1:
+      <external-service-usage enabled="true">
+      <domain>www.Microsoft.com</domain>
+      </external-service-usage>
+    例2:
+      <external-service-usage enabled="false">
+      </external-service-usage>
+    -->
+    <external-service-usage enabled="false">
+      <!--外部ドメインを追加するにはコメントを解除してください
+      <domain></domain>
+      <domain></domain>
+      -->
+    </external-service-usage>
+    <!-- property ノードは、コントロールがCDSから期待する特定の設定可能なデータを識別します -->
+    <property name="ReportLayout" display-name-key ="レポートレイアウト" description-key="帳票表示を行うレポートレイアウトを設定します。" of-type ="Multiple" usage="bound" required="true"/>
+    <property name="ReportData" display-name-key ="レポート表示用データ" description-key="レポート表示用のデータを設定します。" of-type ="Multiple" usage="bound" required="false"/>
+    <property name="ViewerWidth" display-name-key="ビューワの横幅" description-key="ビューワの横幅を指定します。" of-type="SingleLine.Text" pfx-default-value ='"100%"' usage="input" required="true"/>  
+    <property name="ViewerHeight" display-name-key="ビューワの高さ" description-key="ビューワの高さを指定します。" of-type="SingleLine.Text" pfx-default-value ='"100%"' usage="input" required="true"/>
+    <!--
+      Property ノードの of-type 属性は of-type-group 属性にすることができます。
+      例:
+      <type-group name="numbers">
+      <type>Whole.None</type>
+      <type>Currency</type>
+      <type>FP</type>
+      <type>Decimal</type>
+      </type-group>
+      <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
+    -->
+    <resources>
+      <code path="index.ts" order="1"/>
+      <platform-library name="React" version="16.14.0" />
+      <platform-library name="Fluent" version="9.46.2" />
+      <css path="css/app.css" order="2" />
+      <css path="../node_modules/@mescius/activereportsjs/styles/ar-js-ui.css" order="3" />
+      <css path="../node_modules/@mescius/activereportsjs/styles/ar-js-viewer.css" order="4" />            
+      <!-- 追加のリソースを追加するにはコメントを解除してください
+      <css path="css/JSReportsViewer.css" order="1" />
+      <resx path="strings/JSReportsViewer.1033.resx" version="1.0.0" />
+      -->
+    </resources>
+    <!-- 指定されたAPIを有効にするにはコメントを解除してください
+    <feature-usage>
+      <uses-feature name="Device.captureAudio" required="true" />
+      <uses-feature name="Device.captureImage" required="true" />
+      <uses-feature name="Device.captureVideo" required="true" />
+      <uses-feature name="Device.getBarcodeValue" required="true" />
+      <uses-feature name="Device.getCurrentPosition" required="true" />
+      <uses-feature name="Device.pickFile" required="true" />
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+    -->
+  </control>
+</manifest>
