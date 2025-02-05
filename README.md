@@ -9,6 +9,9 @@
 
 [ActiveReportsJSでつくる！PowerAppsの帳票コンポーネント（1）](https://devlog.mescius.jp/activereportsjs-powerapps-1/)
 
+![activereportsjs-powerapps-1](https://github.com/user-attachments/assets/ac2ebe77-6214-4eb9-b7a7-ccc47678508b)
+
+
 ## 特徴
 - Power Apps に ActiveReportsJS を埋め込む
 - 動的にレポートをレンダリング
@@ -20,6 +23,7 @@
 - Node.js
 - Power Platform CLI
 - Visual Studio 2022 の Build Tools
+- [ActiveReportsJS V5.1J（v5.1.5）](https://www.npmjs.com/package/@mescius/activereportsjs/v/5.1.5)
 
 ## インストール
 ```sh
