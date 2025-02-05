@@ -9,7 +9,8 @@
 
 [ActiveReportsJSでつくる！PowerAppsの帳票コンポーネント（1）](https://devlog.mescius.jp/activereportsjs-powerapps-1/)
 
-![activereportsjs-powerapps-1](https://github.com/user-attachments/assets/ac2ebe77-6214-4eb9-b7a7-ccc47678508b)
+![activereportsjs-powerapps-1](https://github.com/user-attachments/assets/2746bf85-7341-4ee7-99f1-e31f3f5df634)
+
 
 
 ## 特徴
